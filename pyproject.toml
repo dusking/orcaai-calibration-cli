@@ -1,0 +1,49 @@
+[project]
+name = "calibration"
+version = "0.1.4"
+description = "OrcaAI Calibration util"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+keywords = ["Calibration"]
+classifiers=[
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "requests"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "build",
+    "twine",
+    "black",
+    "flake8",
+    "mypy",
+    "isort",
+    "pre-commit",
+]
+
+[project.urls]
+"Homepage" = "https://gitlab.com/orca_ai/orcaai-calibration-util"
+"Source" = "https://gitlab.com/orca_ai/orcaai-calibration-util.git"
+
+[tool.black]
+line-length = 120
+ignore = "E203"
+
+[project.scripts]
+calibration = "calibration_cli.main:main"
